@@ -1,0 +1,160 @@
+\documentclass[reprint,amsmath,amssymb,aps,twoside]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{siunitx}
+%\usepackage{tikz,pgfplots}
+\sisetup{separate-uncertainty=true}
+\usepackage[colorlinks,allcolors=blue]{hyperref}
+\usepackage{cleveref}
+\crefname{equation}{}{}
+\crefname{figure}{Fig.}{Figs.}
+\crefname{table}{Table}{Tables}
+\usepackage{svg}
+
+% set PDF metadata
+\hypersetup{%
+pdftitle={Observations of gravitational free fall during drop experiments support a quadratic model},
+pdfauthor={Joseph Cardillo, Jake Croft, Bobby Kapoor, David Pevzner, Soham Sankritya, and Ashmaan Siddiqui},
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,RO]{J S\&E \textbf{2}, 48--53 (2026)}
+\fancyhead[LO]{Cardillo \emph{et al}}
+\fancyhead[LE]{Drop experiments support quadratic model}
+\fancyfoot[C]{\thepage}
+\fancypagestyle{mytitlepage}{
+\fancyhf{}
+\fancyhead[C]{Journal of Science \& Engineering \textbf{2}, 48--53 (2026)}
+\fancyfoot[C]{\thepage}
+}
+
+
+\begin{document}
+\setcounter{page}{48}
+
+\title{Observations of gravitational free fall during drop experiments support a quadratic model}
+\author{Joseph Cardillo}
+\email{Contact author: 427jcardillo@frhsd.com}
+\author{Jake Croft}
+\author{Bobby Kapoor}
+\author{David Pevzner}
+\author{Soham Sankritya}
+\author{Ashmaan Siddiqui}
+\affiliation{Science \& Engineering Magnet Program, \href{https://manalapan.frhsd.com/}{Manalapan High School}, Englishtown, NJ 07726 USA}
+\date{\today}
+
+\begin{abstract}
+When an object is dropped, standard kinematics predicts that in the absence of resistive forces, the vertical distance it travels due to gravity is described quadratically with respect to time. In this experiment, we dropped a tennis ball with negligible initial velocity from various known test heights and recorded the fall time for each trial. We then assessed whether our data were consistent with the predictions of standard kinematics, ultimately finding evidence that our height vs time data is compatible with the constant acceleration assumption of kinematics with a gravitational acceleration of magnitude \qty{9.4\pm0.3}{\meter\per\second\squared}.
+\end{abstract}
+
+\keywords{keywords here}
+
+\maketitle\thispagestyle{mytitlepage}
+
+\section{Introduction}
+
+Kinematics predicts that the acceleration due to gravity is a negative constant denoted by $-g$. However, since we are measuring the distance downwards, we take this constant to be positive.
+\begin{equation}
+a(t) = -g 
+\label{eq:1}
+\end{equation}
+Because acceleration is the instantaneous rate of change or first derivative of velocity, we can integrate over acceleration with respect to time to get an expression for velocity since derivatives and integrals are inverses by the Fundamental Theorem of Calculus \cite{larson:2010:calculus}. Therefore, integrating both sides of \cref{eq:1} with respect to time, we find that the velocity as a function of time is:
+\begin{equation}
+v(t) = -g t + v_0  
+\label{eq:2}
+\end{equation}
+where the integration constant is interpreted as initial velocity, seeing as $v(t=0)=v_0$. Given that velocity is the first derivative of position, we can use similar reasoning to justify integrating both sides of \cref{eq:2} to find:
+\begin{equation}
+x(t) = -\frac{1}{2} g t^2 + v_0 t + x_0
+\label{eq:3}
+\end{equation}
+where the integration constant has been interpreted as the initial position, seeing as $x(t=0)=x_0$.
+
+These three relations describe the motion of objects moving due to gravity near the Earth’s surface under the assumption of negligible air resistance and no forces other than gravity acting upon the object in free fall. 
+
+In our experiment, we drop the masses from a fixed initial position defined to be zero, with zero initial velocity. Therefore, we hypothesize that the distance travelled by the dropped masses will be described by the following special case of \cref{eq:3}, with $g$ to be determined:
+\begin{equation}
+x(t) = -\frac{1}{2} g t^2 
+\label{eq:4}
+\end{equation}
+If we find that such a regression does not fit our data, then we will reject this null hypothesis, concluding that mass does not fall a distance described quadratically with respect to time as per the predictions of kinematics.  
+
+
+
+
+
+
+\section{Methods and materials}
+In our experiment, we utilized five meters of fishing line with tape marking every meter, which had a PENN tennis ball of mass \qty{57.5}{\gram} hot-glued to the end and a PULIVIA YS-802 stopwatch to measure the time it took the ball to fall certain distances. We then took turns dropping the tennis ball out of the window while holding on to the string at the mark of how much distance we wanted the ball to fall. Each trial began by positioning the ball at a second-story window approximately \qty{5.0}{\meter} above the ground. Because the maximum length of the string was equal to the \qty{5.0}{\meter} height of the window, the string consistently caught the ball before it could make contact with the ground. The person who held this string also held a stopwatch, which they would start as soon as they dropped the ball and end when they saw and felt the ball travel the full distance. The ability of droppers to see the ball as it fell meant they could anticipate when the ball would travel the full distance, leading to both overestimates and underestimates of the fall time. We performed this experiment with three trials per string length for seven different string lengths, meaning we conducted 21 trials in total. The string lengths were: \qtylist{0.50;1.00;1.50;2.00;3.00;4.00;5.00}{\meter}. Initially, we only planned to use string lengths in increments of one meter, but finding ourselves with extra time on lab day, we also conducted trials for strings of length \qty{0.5}{\meter} and \qty{1.5}{\meter}. Distance measurements were taken with high but not perfect accuracy due to slight slippage of the tape with each trial. Timing measurements, on the other hand, were relatively volatile because of errors in human response time.    
+
+Note that we made numerous choices to reduce experimental errors in our trials. For instance, we alternated droppers so that the reflexes of those releasing the ball would not create systematic errors in our experiment. Moreover, we intentionally had droppers hold the stopwatch so that they could accurately drop the ball at the same time that they started the stopwatch.
+
+Using our experimentally determined data, we plotted distance vs time squared in order to linearize our data so that we could create a linear regression whose slope would be equal to $g/2$ because of \cref{eq:4} and whose $R^2$ represents how well the data fit the predictions of kinematics. 
+
+We also took note of the residual for each trial because this is what we will use in our discussion to justify the accuracy of our regression. We calculated these residuals according to \cref{eq:5} shown below, where our observed value was our experimental value, and the expected value was predicted by the regression model.
+\begin{equation}
+\text{residual} = \text{observed} - \text{expected}
+\end{equation}
+
+
+
+
+
+\section{Results}
+In the table below, we list the data we recorded after several trials of experimentation. We also took note of the residuals of each trial. All data were organized through the use of the Google Sheets software, and graphs and statistical data were synthesized through this software. Since human error results in variability with the true value, all fall-time data were rounded to the second decimal place before being written in the table.
+\begin{table}
+\caption{Distance fallen by the tennis ball ($x, \unit{\meter}$) versus time ($t, \unit{\second}$)}
+\label{tab:1}
+\end{table}
+\begin{figure}
+\caption{Distance fallen ($x$) vs time squared ($t^2$) for the data in \cref{tab:1}}. 
+\label{fig:2}
+\end{figure}
+\begin{figure}
+\caption{Residual plot for data in \cref{fig:2}}
+\label{fig:3}
+\end{figure}
+
+\Cref{fig:3} shows that the residuals are randomly distributed with no clear pattern, affirming the model’s accuracy because a pattern would suggest that error in the data was attributable to an issue with the regression rather than simply experimental error. Moreover, considering our coefficient of determination of $R^2=0.964$ is very close to 1, meaning that 96.5\% of the variability in the distance fallen is described by the independent variable of time, we can see that our data are highly quadratically correlated, and the model of standard kinematics fits the data well.
+
+The slope of our regression line was 4.7. As a result, from \cref{eq:4}, we estimate $g=\qty{9.4\pm0.3}{\meter\per\second\squared}$ (mean $\pm$ 1 s.d.). 
+
+
+
+
+
+\section{Discussion}
+Considering the widely accepted value for the gravitational constant is $g=\qty{9.81}{\meter\per\second\squared}$ \cite{tipler}, our estimate of \qty{9.4\pm0.3}{\meter\per\second\squared} is within 5\% error of the actual value, considering we had such a low-tech setup. 
+%Using the formula for percent error  , we calculate that the percent error on our point estimate is  , which is rather small. This is quite lucky considering how enormously susceptible our methods were to human error. 
+The data also fit a model that is quadratic in time, e.g. \cref{eq:4}, as shown in \cref{fig:2} and \cref{fig:3}. These are consistent with \ref{galilei:1638:discorsi}; objects in free fall accelerate with uniform acceleration, at least for the case of small balls falling from a second-story classroom window or some nearby Renaissance tower. 
+
+Throughout our experimentation, we experienced a few experimental errors. For instance, the tensile strength of our string was subpar and not suitable for the quantity of trials we conducted. As a result, due to the force of gravity, drops from larger heights built up greater acceleration, and therefore, a greater force was exerted upon the string, causing the string to break on one of our drops at \qty{5}{\meter}. However, our main setback was due to the string forming knots and tangling after each trial, due to the string bouncing as a result of its elasticity. These knots changed the length of the string and had to be manually fixed, which resulted in many retrials. Human error was a large cause of inconsistency with our expected results in the experiment, as both starting and stopping the stopwatch off time directly impacted the data we observed. To remedy this, the rest of the group observed the drop, and if it appeared that the timing was incorrect, we would redo the trial.
+
+
+
+
+
+\section{Acknowledgements} 
+We thank several anonymous reviewers for providing helpful comments. SD and SH primarily led on data collection as well as the writing of the introduction and methods. RW wrote the abstract and helped collect data. SS, JC, JC, BK, AS, and DP conducted the data collection. DP authored the Abstract, Introduction, and Discussion. BK and AS wrote the Methods and Materials. JC and JC performed the data analysis and produced the Results section.
+
+
+
+
+
+\bibliography{lab.bib}
+%References 
+
+%Galilei, Galileo. Two New Sciences. Translated by Stillman Drake, University of Wisconsin Press, 1974.
+
+%Tipler, Paul A., and Gene Mosca. Physics for Scientists and Engineers. 5th ed., W. H. Freeman, 2003.
+
+%Brown, Douglas, Robert M. Hanson, and Wolfgang Christian. "Tracker Online." Open Source Physics, AAPT, https://opensourcephysics.github.io/tracker-online/
+
+%Larson, R., & Edwards, B. H. (2010). Calculus of a single variable. Brooks/Cole.
+%Starnes, D., & Tabor, J. (2020). Updated version of the practice of statistics for the APA course (Student edition) daren starnes, Josh Tabor. Macmillan Learning.
+%Tipler, P. A., & Mosca, G. (2004). Physics for scientists and engineers. W.H. Freeman.
+\end{document}
