@@ -12,6 +12,9 @@
    height="2in"
    xml:space="preserve"
    inkscape:version="1.4.3 (1:1.4.3+202512261035+0d15f75042)"
+   inkscape:export-filename="fig1.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -307,7 +310,7 @@
        id="path72" /></g><text
      xml:space="preserve"
      id="text70"
-     style="font-size:10.6667px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect70);fill:#000000"
+     style="font-size:10.6667px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect70);display:inline;fill:#000000"
      transform="translate(-2.4723573,11.88542)"><tspan
        x="12.857422"
        y="38.708495"
