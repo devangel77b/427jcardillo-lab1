@@ -13,6 +13,7 @@
 \crefname{figure}{Fig.}{Figs.}
 \crefname{table}{Table}{Tables}
 \usepackage{svg}
+\svgpath{{./figures}}
 
 % set PDF metadata
 \hypersetup{%
@@ -89,6 +90,13 @@ If we find that such a regression does not fit our data, then we will reject thi
 
 
 \section{Methods and materials}
+\begin{figure}
+\begin{center}
+\includegraphics{figures/fig1.pdf}
+\end{center}
+\caption{Caption here}
+\label{fig:1}
+\end{figure}
 In our experiment, we utilized five meters of fishing line with tape marking every meter, which had a PENN tennis ball of mass \qty{57.5}{\gram} hot-glued to the end and a PULIVIA YS-802 stopwatch to measure the time it took the ball to fall certain distances. We then took turns dropping the tennis ball out of the window while holding on to the string at the mark of how much distance we wanted the ball to fall. Each trial began by positioning the ball at a second-story window approximately \qty{5.0}{\meter} above the ground. Because the maximum length of the string was equal to the \qty{5.0}{\meter} height of the window, the string consistently caught the ball before it could make contact with the ground. The person who held this string also held a stopwatch, which they would start as soon as they dropped the ball and end when they saw and felt the ball travel the full distance. The ability of droppers to see the ball as it fell meant they could anticipate when the ball would travel the full distance, leading to both overestimates and underestimates of the fall time. We performed this experiment with three trials per string length for seven different string lengths, meaning we conducted 21 trials in total. The string lengths were: \qtylist{0.50;1.00;1.50;2.00;3.00;4.00;5.00}{\meter}. Initially, we only planned to use string lengths in increments of one meter, but finding ourselves with extra time on lab day, we also conducted trials for strings of length \qty{0.5}{\meter} and \qty{1.5}{\meter}. Distance measurements were taken with high but not perfect accuracy due to slight slippage of the tape with each trial. Timing measurements, on the other hand, were relatively volatile because of errors in human response time.    
 
 Note that we made numerous choices to reduce experimental errors in our trials. For instance, we alternated droppers so that the reflexes of those releasing the ball would not create systematic errors in our experiment. Moreover, we intentionally had droppers hold the stopwatch so that they could accurately drop the ball at the same time that they started the stopwatch.
@@ -111,13 +119,16 @@ In the table below, we list the data we recorded after several trials of experim
 \label{tab:1}
 \end{table}
 \begin{figure}
+\begin{center}
+\includesvg{fig2.svg}
+\end{center}
 \caption{Distance fallen ($x$) vs time squared ($t^2$) for the data in \cref{tab:1}}. 
 \label{fig:2}
 \end{figure}
-\begin{figure}
-\caption{Residual plot for data in \cref{fig:2}}
-\label{fig:3}
-\end{figure}
+%\begin{figure}
+%\caption{Residual plot for data in \cref{fig:2}}
+%\label{fig:3}
+%\end{figure}
 
 \Cref{fig:3} shows that the residuals are randomly distributed with no clear pattern, affirming the model’s accuracy because a pattern would suggest that error in the data was attributable to an issue with the regression rather than simply experimental error. Moreover, considering our coefficient of determination of $R^2=0.964$ is very close to 1, meaning that 96.5\% of the variability in the distance fallen is described by the independent variable of time, we can see that our data are highly quadratically correlated, and the model of standard kinematics fits the data well.
 
