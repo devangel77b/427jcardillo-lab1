@@ -70,16 +70,16 @@ v(t) = -g t + v_0
 \end{equation}
 where the integration constant is interpreted as initial velocity, seeing as $v(t=0)=v_0$. Given that velocity is the first derivative of position, we can use similar reasoning to justify integrating both sides of \cref{eq:2} to find:
 \begin{equation}
-x(t) = -\frac{1}{2} g t^2 + v_0 t + x_0
+y(t) = -\frac{1}{2} g t^2 + v_0 t + y_0
 \label{eq:3}
 \end{equation}
-where the integration constant has been interpreted as the initial position, seeing as $x(t=0)=x_0$.
+where the integration constant has been interpreted as the initial position, seeing as $y(t=0)=y_0$.
 
 These three relations describe the motion of objects moving due to gravity near the Earth’s surface under the assumption of negligible air resistance and no forces other than gravity acting upon the object in free fall. 
 
 In our experiment, we drop the masses from a fixed initial position defined to be zero, with zero initial velocity. Therefore, we hypothesize that the distance travelled by the dropped masses will be described by the following special case of \cref{eq:3}, with $g$ to be determined:
 \begin{equation}
-x(t) = -\frac{1}{2} g t^2 
+y(t) = -\frac{1}{2} g t^2 
 \label{eq:4}
 \end{equation}
 If we find that such a regression does not fit our data, then we will reject this null hypothesis, concluding that mass does not fall a distance described quadratically with respect to time as per the predictions of kinematics.  
@@ -114,15 +114,16 @@ We also took note of the residual for each trial because this is what we will us
 
 \section{Results}
 In the table below, we list the data we recorded after several trials of experimentation. We also took note of the residuals of each trial. All data were organized through the use of the Google Sheets software, and graphs and statistical data were synthesized through this software. Since human error results in variability with the true value, all fall-time data were rounded to the second decimal place before being written in the table.
-\begin{table}
-\caption{Distance fallen by the tennis ball ($x, \unit{\meter}$) versus time ($t, \unit{\second}$)}
-\label{tab:1}
-\end{table}
+\input{tables/table1.tex}
+%\begin{table}
+%\caption{Distance fallen by the tennis ball ($x, \unit{\meter}$) versus time ($t, \unit{\second}$)}
+%\label{tab:1}
+%\end{table}
 \begin{figure}
 \begin{center}
 \includesvg{fig2.svg}
 \end{center}
-\caption{Distance fallen ($x$) vs time squared ($t^2$) for the data in \cref{tab:1}}. 
+\caption{Distance fallen ($y$) vs time squared ($t^2$) for the data in \cref{tab:1}}. 
 \label{fig:2}
 \end{figure}
 %\begin{figure}
