@@ -57,13 +57,12 @@ When an object is dropped, standard kinematics predicts that in the absence of r
 \maketitle\thispagestyle{mytitlepage}
 
 \section{Introduction}
-
-Kinematics predicts that the acceleration due to gravity is a negative constant denoted by $-g$. However, since we are measuring the distance downwards, we take this constant to be positive.
+Kinematics predicts that the acceleration due to gravity is a negative constant denoted by $-g$. However, since we are measuring the distance downwards, we take $g$ to be positive \cite{tipler,openstax,barrons}.
 \begin{equation}
 a(t) = -g 
 \label{eq:1}
 \end{equation}
-Because acceleration is the instantaneous rate of change or first derivative of velocity, we can integrate over acceleration with respect to time to get an expression for velocity since derivatives and integrals are inverses by the Fundamental Theorem of Calculus \cite{larson:2010:calculus}. Therefore, integrating both sides of \cref{eq:1} with respect to time, we find that the velocity as a function of time is:
+Because acceleration is the instantaneous rate of change or first derivative of velocity, we can integrate over acceleration with respect to time to get an expression for velocity since derivatives and integrals are inverses by the Fundamental Theorem of Calculus \cite{larson:2010:calculus}. Therefore, integrating both sides of \cref{eq:1} with respect to time, we find that the velocity as a function of time is \cite{tipler, openstax, barrons}:
 \begin{equation}
 v(t) = -g t + v_0  
 \label{eq:2}
@@ -97,7 +96,7 @@ If we find that such a regression does not fit our data, then we will reject thi
 \caption{Caption here}
 \label{fig:1}
 \end{figure}
-In our experiment, we utilized five meters of fishing line with tape marking every meter, which had a PENN tennis ball of mass \qty{57.5}{\gram} hot-glued to the end and a PULIVIA YS-802 stopwatch to measure the time it took the ball to fall certain distances. We then took turns dropping the tennis ball out of the window while holding on to the string at the mark of how much distance we wanted the ball to fall. Each trial began by positioning the ball at a second-story window approximately \qty{5.0}{\meter} above the ground. Because the maximum length of the string was equal to the \qty{5.0}{\meter} height of the window, the string consistently caught the ball before it could make contact with the ground. The person who held this string also held a stopwatch, which they would start as soon as they dropped the ball and end when they saw and felt the ball travel the full distance. The ability of droppers to see the ball as it fell meant they could anticipate when the ball would travel the full distance, leading to both overestimates and underestimates of the fall time. We performed this experiment with three trials per string length for seven different string lengths, meaning we conducted 21 trials in total. The string lengths were: \qtylist{0.50;1.00;1.50;2.00;3.00;4.00;5.00}{\meter}. Initially, we only planned to use string lengths in increments of one meter, but finding ourselves with extra time on lab day, we also conducted trials for strings of length \qty{0.5}{\meter} and \qty{1.5}{\meter}. Distance measurements were taken with high but not perfect accuracy due to slight slippage of the tape with each trial. Timing measurements, on the other hand, were relatively volatile because of errors in human response time.    
+In our experiment, we utilized \qty{5}{\meter} of monofilament fishing line with tape marking every meter, which had a tennis ball (Penn Racquet Sports; Phoenix, AZ) of mass \qty{57.5}{\gram} hot-glued to the end and a stopwatch (Pulivia YS-802; ShenZhen YiSheng Technology Co; Shenzhen, China) to measure the time it took the ball to fall certain distances. We then took turns dropping the tennis ball out of the window while holding on to the string at the mark of how much distance we wanted the ball to fall. Each trial began by positioning the ball at a second-story window approximately \qty{5.0}{\meter} above the ground. Because the maximum length of the string was equal to the \qty{5.0}{\meter} height of the window, the string consistently caught the ball before it could make contact with the ground. The person who held this string also held a stopwatch, which they would start as soon as they dropped the ball and end when they saw and felt the ball travel the full distance. The ability of droppers to see the ball as it fell meant they could anticipate when the ball would travel the full distance, leading to both overestimates and underestimates of the fall time. We performed this experiment with three trials per string length for seven different string lengths, meaning we conducted 21 trials in total. The string lengths were: \qtylist{0.50;1.00;1.50;2.00;3.00;4.00;5.00}{\meter}. Initially, we only planned to use string lengths in increments of one meter, but finding ourselves with extra time on lab day, we also conducted trials for strings of length \qty{0.5}{\meter} and \qty{1.5}{\meter}. Distance measurements were taken with high but not perfect accuracy due to slight slippage of the tape with each trial. Timing measurements, on the other hand, were relatively volatile because of errors in human response time.    
 
 Note that we made numerous choices to reduce experimental errors in our trials. For instance, we alternated droppers so that the reflexes of those releasing the ball would not create systematic errors in our experiment. Moreover, we intentionally had droppers hold the stopwatch so that they could accurately drop the ball at the same time that they started the stopwatch.
 
@@ -108,7 +107,7 @@ We also took note of the residual for each trial because this is what we will us
 \text{residual} = \text{observed} - \text{expected}
 \end{equation}
 
-
+Statistical analyses \cite{starnes:2015:practice} were performed in R \cite{R} using the \texttt{dplyr} and \texttt{ggplot2} packages \cite{dplyr, ggplot2}. 
 
 
 
@@ -140,9 +139,9 @@ The slope of our regression line was 4.7. As a result, from \cref{eq:4}, we esti
 
 
 \section{Discussion}
-Considering the widely accepted value for the gravitational constant is $g=\qty{9.81}{\meter\per\second\squared}$ \cite{tipler}, our estimate of \qty{9.4\pm0.3}{\meter\per\second\squared} is within 5\% error of the actual value, considering we had such a low-tech setup. 
+Considering the widely accepted value for the gravitational constant is $g=\qty{9.81}{\meter\per\second\squared}$ \cite{tipler, openstax, barrons}, our estimate of \qty{9.4\pm0.3}{\meter\per\second\squared} is within 5\% error of the actual value, considering we had such a low-tech setup. 
 %Using the formula for percent error  , we calculate that the percent error on our point estimate is  , which is rather small. This is quite lucky considering how enormously susceptible our methods were to human error. 
-The data also fit a model that is quadratic in time, e.g. \cref{eq:4}, as shown in \cref{fig:2} and \cref{fig:3}. These are consistent with \ref{galilei:1638:discorsi}; objects in free fall accelerate with uniform acceleration, at least for the case of small balls falling from a second-story classroom window or some nearby Renaissance tower. 
+The data also fit a model that is quadratic in time, e.g. \cref{eq:4}, as shown in \cref{fig:2} and \cref{fig:3}. These are consistent with \ref{tipler, openstax, galilei:1638:discorsi}; objects in free fall accelerate with uniform acceleration, at least for the case of small balls falling from a second-story classroom window or some nearby Renaissance tower. 
 
 Throughout our experimentation, we experienced a few experimental errors. For instance, the tensile strength of our string was subpar and not suitable for the quantity of trials we conducted. As a result, due to the force of gravity, drops from larger heights built up greater acceleration, and therefore, a greater force was exerted upon the string, causing the string to break on one of our drops at \qty{5}{\meter}. However, our main setback was due to the string forming knots and tangling after each trial, due to the string bouncing as a result of its elasticity. These knots changed the length of the string and had to be manually fixed, which resulted in many retrials. Human error was a large cause of inconsistency with our expected results in the experiment, as both starting and stopping the stopwatch off time directly impacted the data we observed. To remedy this, the rest of the group observed the drop, and if it appeared that the timing was incorrect, we would redo the trial.
 
